@@ -49,7 +49,7 @@
             // 
             // buttonGoMain_KFA
             // 
-            buttonGoMain_KFA.Location = new Point(28, 384);
+            buttonGoMain_KFA.Location = new Point(12, 384);
             buttonGoMain_KFA.Name = "buttonGoMain_KFA";
             buttonGoMain_KFA.Size = new Size(179, 54);
             buttonGoMain_KFA.TabIndex = 0;
@@ -60,7 +60,7 @@
             // dataGridViewGoods_KFA
             // 
             dataGridViewGoods_KFA.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewGoods_KFA.Location = new Point(28, 12);
+            dataGridViewGoods_KFA.Location = new Point(12, 10);
             dataGridViewGoods_KFA.Name = "dataGridViewGoods_KFA";
             dataGridViewGoods_KFA.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewGoods_KFA.Size = new Size(745, 223);
@@ -68,9 +68,9 @@
             // 
             // buttonExportCVS_KFA
             // 
-            buttonExportCVS_KFA.Location = new Point(28, 239);
+            buttonExportCVS_KFA.Location = new Point(12, 239);
             buttonExportCVS_KFA.Name = "buttonExportCVS_KFA";
-            buttonExportCVS_KFA.Size = new Size(177, 41);
+            buttonExportCVS_KFA.Size = new Size(105, 30);
             buttonExportCVS_KFA.TabIndex = 2;
             buttonExportCVS_KFA.Text = "Save";
             buttonExportCVS_KFA.UseVisualStyleBackColor = true;
@@ -78,16 +78,16 @@
             // 
             // textBoxFindValue_KFA
             // 
-            textBoxFindValue_KFA.Location = new Point(28, 286);
+            textBoxFindValue_KFA.Location = new Point(12, 314);
             textBoxFindValue_KFA.Name = "textBoxFindValue_KFA";
-            textBoxFindValue_KFA.Size = new Size(194, 23);
+            textBoxFindValue_KFA.Size = new Size(216, 23);
             textBoxFindValue_KFA.TabIndex = 3;
             // 
             // buttonDeleteGood_KFA
             // 
-            buttonDeleteGood_KFA.Location = new Point(211, 239);
+            buttonDeleteGood_KFA.Location = new Point(123, 239);
             buttonDeleteGood_KFA.Name = "buttonDeleteGood_KFA";
-            buttonDeleteGood_KFA.Size = new Size(179, 41);
+            buttonDeleteGood_KFA.Size = new Size(105, 30);
             buttonDeleteGood_KFA.TabIndex = 4;
             buttonDeleteGood_KFA.Text = "Delete";
             buttonDeleteGood_KFA.UseVisualStyleBackColor = true;
@@ -95,12 +95,13 @@
             // 
             // buttonImportCSV_KFA
             // 
-            buttonImportCSV_KFA.Location = new Point(248, 401);
+            buttonImportCSV_KFA.Location = new Point(248, 417);
             buttonImportCSV_KFA.Name = "buttonImportCSV_KFA";
-            buttonImportCSV_KFA.Size = new Size(179, 37);
+            buttonImportCSV_KFA.Size = new Size(18, 21);
             buttonImportCSV_KFA.TabIndex = 5;
             buttonImportCSV_KFA.Text = "Import";
             buttonImportCSV_KFA.UseVisualStyleBackColor = true;
+            buttonImportCSV_KFA.Visible = false;
             buttonImportCSV_KFA.Click += buttonImportCSV_KFA_Click;
             // 
             // openFileDialogMatrix_KFA
@@ -109,9 +110,9 @@
             // 
             // buttonFindValue_KFA
             // 
-            buttonFindValue_KFA.Location = new Point(45, 315);
+            buttonFindValue_KFA.Location = new Point(12, 275);
             buttonFindValue_KFA.Name = "buttonFindValue_KFA";
-            buttonFindValue_KFA.Size = new Size(160, 35);
+            buttonFindValue_KFA.Size = new Size(216, 34);
             buttonFindValue_KFA.TabIndex = 6;
             buttonFindValue_KFA.Text = "Найти";
             buttonFindValue_KFA.UseVisualStyleBackColor = true;
@@ -193,7 +194,7 @@
             Controls.Add(dataGridViewGoods_KFA);
             Controls.Add(buttonGoMain_KFA);
             Name = "FormGoods";
-            Text = "Form1";
+            Text = "Suppliers";
             Load += FormGoods_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewGoods_KFA).EndInit();
             groupBoxCalculation_KFA.ResumeLayout(false);

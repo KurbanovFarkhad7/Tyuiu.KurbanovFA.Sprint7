@@ -21,7 +21,8 @@
 
         public double FindMiddleValue(double[] array) 
         {
-            return Math.Round(array.Sum() / (array.Length - 1), 3);
+            array = RemoveLastElement(array);
+            return Math.Round(array.Sum() / (array.Length), 3);
         }
         
         public double FindTotalValue(double[] array)

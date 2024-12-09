@@ -32,7 +32,7 @@
             dataGridViewGoods_KFA = new DataGridView();
             buttonExportCVS_KFA = new Button();
             textBoxFilePath_KFA = new TextBox();
-            buttonSaveGood_KFA = new Button();
+            buttonDeleteGood_KFA = new Button();
             buttonImportCSV_KFA = new Button();
             saveFileDialogMatrix_KFA = new SaveFileDialog();
             openFileDialogMatrix_KFA = new OpenFileDialog();
@@ -60,11 +60,11 @@
             // 
             // buttonExportCVS_KFA
             // 
-            buttonExportCVS_KFA.Location = new Point(213, 241);
+            buttonExportCVS_KFA.Location = new Point(28, 239);
             buttonExportCVS_KFA.Name = "buttonExportCVS_KFA";
-            buttonExportCVS_KFA.Size = new Size(176, 37);
+            buttonExportCVS_KFA.Size = new Size(177, 41);
             buttonExportCVS_KFA.TabIndex = 2;
-            buttonExportCVS_KFA.Text = "Export";
+            buttonExportCVS_KFA.Text = "Save";
             buttonExportCVS_KFA.UseVisualStyleBackColor = true;
             buttonExportCVS_KFA.Click += buttonExportCVS_KFA_Click;
             // 
@@ -75,19 +75,19 @@
             textBoxFilePath_KFA.Size = new Size(31, 23);
             textBoxFilePath_KFA.TabIndex = 3;
             // 
-            // buttonSaveGood_KFA
+            // buttonDeleteGood_KFA
             // 
-            buttonSaveGood_KFA.Location = new Point(28, 303);
-            buttonSaveGood_KFA.Name = "buttonSaveGood_KFA";
-            buttonSaveGood_KFA.Size = new Size(179, 41);
-            buttonSaveGood_KFA.TabIndex = 4;
-            buttonSaveGood_KFA.Text = "Save";
-            buttonSaveGood_KFA.UseVisualStyleBackColor = true;
-            buttonSaveGood_KFA.Click += buttonSaveGood_KFA_Click;
+            buttonDeleteGood_KFA.Location = new Point(211, 239);
+            buttonDeleteGood_KFA.Name = "buttonDeleteGood_KFA";
+            buttonDeleteGood_KFA.Size = new Size(179, 41);
+            buttonDeleteGood_KFA.TabIndex = 4;
+            buttonDeleteGood_KFA.Text = "Delete";
+            buttonDeleteGood_KFA.UseVisualStyleBackColor = true;
+            buttonDeleteGood_KFA.Click += buttonDeleteGood_KFA_Click;
             // 
             // buttonImportCSV_KFA
             // 
-            buttonImportCSV_KFA.Location = new Point(28, 241);
+            buttonImportCSV_KFA.Location = new Point(333, 393);
             buttonImportCSV_KFA.Name = "buttonImportCSV_KFA";
             buttonImportCSV_KFA.Size = new Size(179, 37);
             buttonImportCSV_KFA.TabIndex = 5;
@@ -105,7 +105,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(buttonImportCSV_KFA);
-            Controls.Add(buttonSaveGood_KFA);
+            Controls.Add(buttonDeleteGood_KFA);
             Controls.Add(textBoxFilePath_KFA);
             Controls.Add(buttonExportCVS_KFA);
             Controls.Add(dataGridViewGoods_KFA);
@@ -124,7 +124,7 @@
         private DataGridView dataGridViewGoods_KFA;
         private Button buttonExportCVS_KFA;
         private TextBox textBoxFilePath_KFA;
-        private Button buttonSaveGood_KFA;
+        private Button buttonDeleteGood_KFA;
         private Button buttonImportCSV_KFA;
         private SaveFileDialog saveFileDialogMatrix_KFA;
         private OpenFileDialog openFileDialogMatrix_KFA;

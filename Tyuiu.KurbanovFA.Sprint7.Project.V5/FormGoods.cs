@@ -36,9 +36,12 @@ namespace Tyuiu.KurbanovFA.Sprint7.Project.V5
             fmain.ShowDialog();
         }
 
-        public void buttonSaveGood_KFA_Click(object sender, EventArgs e)
+        public void buttonDeleteGood_KFA_Click(object sender, EventArgs e)
         {
-
+            foreach (DataGridViewRow row in dataGridViewGoods_KFA.SelectedRows)
+            {
+                dataGridViewGoods_KFA.Rows.RemoveAt(row.Index);
+            }
         }
 
         private void ImportCsvToDataGridView(string filePath)

@@ -201,5 +201,18 @@ namespace Tyuiu.KurbanovFA.Sprint7.Project.V5
             double[] array = GetArrayRow(3);
             textBoxResultCalculation_KFA.Text = ds.FindMaxValue(array).ToString();
         }
+
+        private void buttonAddGood_KFA_Click(object sender, EventArgs e)
+        {
+            double[] array = { };
+            if (array != null)
+            {
+                array = GetArrayRow(0);
+                /*(dataGridViewGoods_KFA.DataSource as DataTable).Rows.Add();*/
+                dataGridViewGoods_KFA.CurrentCell = dataGridViewGoods_KFA[0, dataGridViewGoods_KFA.Rows.Count - 1];
+                dataGridViewGoods_KFA.CurrentCell.Value = array.Length;
+                dataGridViewGoods_KFA.CurrentCell = dataGridViewGoods_KFA[1, dataGridViewGoods_KFA.Rows.Count - 1];
+            }
+        }
     }
 }

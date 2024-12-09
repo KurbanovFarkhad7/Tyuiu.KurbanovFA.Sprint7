@@ -43,6 +43,7 @@
             buttonSearchMinPrice_KFA = new Button();
             buttonSearchTotalPrice_KFA = new Button();
             textBoxResultCalculation_KFA = new TextBox();
+            buttonAddGood_KFA = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewGoods_KFA).BeginInit();
             groupBoxCalculation_KFA.SuspendLayout();
             SuspendLayout();
@@ -68,7 +69,7 @@
             // 
             // buttonExportCVS_KFA
             // 
-            buttonExportCVS_KFA.Location = new Point(12, 239);
+            buttonExportCVS_KFA.Location = new Point(123, 239);
             buttonExportCVS_KFA.Name = "buttonExportCVS_KFA";
             buttonExportCVS_KFA.Size = new Size(105, 30);
             buttonExportCVS_KFA.TabIndex = 2;
@@ -85,7 +86,7 @@
             // 
             // buttonDeleteGood_KFA
             // 
-            buttonDeleteGood_KFA.Location = new Point(123, 239);
+            buttonDeleteGood_KFA.Location = new Point(13, 343);
             buttonDeleteGood_KFA.Name = "buttonDeleteGood_KFA";
             buttonDeleteGood_KFA.Size = new Size(105, 30);
             buttonDeleteGood_KFA.TabIndex = 4;
@@ -180,11 +181,22 @@
             textBoxResultCalculation_KFA.Size = new Size(100, 23);
             textBoxResultCalculation_KFA.TabIndex = 8;
             // 
+            // buttonAddGood_KFA
+            // 
+            buttonAddGood_KFA.Location = new Point(13, 239);
+            buttonAddGood_KFA.Name = "buttonAddGood_KFA";
+            buttonAddGood_KFA.Size = new Size(104, 30);
+            buttonAddGood_KFA.TabIndex = 9;
+            buttonAddGood_KFA.Text = "Add";
+            buttonAddGood_KFA.UseVisualStyleBackColor = true;
+            buttonAddGood_KFA.Click += buttonAddGood_KFA_Click;
+            // 
             // FormGoods
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(buttonAddGood_KFA);
             Controls.Add(groupBoxCalculation_KFA);
             Controls.Add(buttonFindValue_KFA);
             Controls.Add(buttonImportCSV_KFA);
@@ -194,7 +206,7 @@
             Controls.Add(dataGridViewGoods_KFA);
             Controls.Add(buttonGoMain_KFA);
             Name = "FormGoods";
-            Text = "Suppliers";
+            Text = "Goods";
             Load += FormGoods_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewGoods_KFA).EndInit();
             groupBoxCalculation_KFA.ResumeLayout(false);
@@ -220,5 +232,6 @@
         private Button buttonSearchTotalPrice_KFA;
         private Button buttonSearchMinPrice_KFA;
         private Button buttonSearchMaxNumber_KFA;
+        private Button buttonAddGood_KFA;
     }
 }

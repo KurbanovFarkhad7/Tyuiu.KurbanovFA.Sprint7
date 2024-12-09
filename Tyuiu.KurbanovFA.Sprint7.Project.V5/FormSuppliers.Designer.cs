@@ -41,15 +41,16 @@
             buttonSearchTotalPrice_KFA = new Button();
             textBoxResultCalculation_KFA = new TextBox();
             buttonSearchMiddlePrice_KFA = new Button();
+            buttonAddSupplier_KFA = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewSuppliers_KFA).BeginInit();
             groupBoxCalculation_KFA.SuspendLayout();
             SuspendLayout();
             // 
             // buttonGoMain
             // 
-            buttonGoMain.Location = new Point(12, 362);
+            buttonGoMain.Location = new Point(12, 402);
             buttonGoMain.Name = "buttonGoMain";
-            buttonGoMain.Size = new Size(154, 76);
+            buttonGoMain.Size = new Size(154, 36);
             buttonGoMain.TabIndex = 0;
             buttonGoMain.Text = "Меню";
             buttonGoMain.UseVisualStyleBackColor = true;
@@ -78,7 +79,7 @@
             // 
             buttonExportCVS_KFA.Location = new Point(12, 250);
             buttonExportCVS_KFA.Name = "buttonExportCVS_KFA";
-            buttonExportCVS_KFA.Size = new Size(123, 34);
+            buttonExportCVS_KFA.Size = new Size(99, 30);
             buttonExportCVS_KFA.TabIndex = 3;
             buttonExportCVS_KFA.Text = "Save";
             buttonExportCVS_KFA.UseVisualStyleBackColor = true;
@@ -86,7 +87,7 @@
             // 
             // buttonDeleteSupplier_KFA
             // 
-            buttonDeleteSupplier_KFA.Location = new Point(141, 250);
+            buttonDeleteSupplier_KFA.Location = new Point(12, 355);
             buttonDeleteSupplier_KFA.Name = "buttonDeleteSupplier_KFA";
             buttonDeleteSupplier_KFA.Size = new Size(123, 34);
             buttonDeleteSupplier_KFA.TabIndex = 4;
@@ -98,7 +99,7 @@
             // 
             buttonFindValue_KFA.Location = new Point(12, 290);
             buttonFindValue_KFA.Name = "buttonFindValue_KFA";
-            buttonFindValue_KFA.Size = new Size(252, 30);
+            buttonFindValue_KFA.Size = new Size(204, 30);
             buttonFindValue_KFA.TabIndex = 5;
             buttonFindValue_KFA.Text = "Найти";
             buttonFindValue_KFA.UseVisualStyleBackColor = true;
@@ -108,7 +109,7 @@
             // 
             textBoxFindValue_KFA.Location = new Point(12, 326);
             textBoxFindValue_KFA.Name = "textBoxFindValue_KFA";
-            textBoxFindValue_KFA.Size = new Size(252, 23);
+            textBoxFindValue_KFA.Size = new Size(204, 23);
             textBoxFindValue_KFA.TabIndex = 6;
             // 
             // groupBoxCalculation_KFA
@@ -131,7 +132,7 @@
             buttonSearchMaxNumber_KFA.Name = "buttonSearchMaxNumber_KFA";
             buttonSearchMaxNumber_KFA.Size = new Size(142, 42);
             buttonSearchMaxNumber_KFA.TabIndex = 11;
-            buttonSearchMaxNumber_KFA.Text = "Максимальное кол-во";
+            buttonSearchMaxNumber_KFA.Text = "Наибольная поставка";
             buttonSearchMaxNumber_KFA.UseVisualStyleBackColor = true;
             buttonSearchMaxNumber_KFA.Click += buttonSearchMaxNumber_KFA_Click;
             // 
@@ -141,7 +142,7 @@
             buttonSearchMinPrice_KFA.Name = "buttonSearchMinPrice_KFA";
             buttonSearchMinPrice_KFA.Size = new Size(126, 41);
             buttonSearchMinPrice_KFA.TabIndex = 10;
-            buttonSearchMinPrice_KFA.Text = "Минимальная цена";
+            buttonSearchMinPrice_KFA.Text = "Минимум поставок";
             buttonSearchMinPrice_KFA.UseVisualStyleBackColor = true;
             buttonSearchMinPrice_KFA.Click += buttonSearchMinPrice_KFA_Click;
             // 
@@ -151,7 +152,7 @@
             buttonSearchTotalPrice_KFA.Name = "buttonSearchTotalPrice_KFA";
             buttonSearchTotalPrice_KFA.Size = new Size(142, 37);
             buttonSearchTotalPrice_KFA.TabIndex = 9;
-            buttonSearchTotalPrice_KFA.Text = "Общая стоимость";
+            buttonSearchTotalPrice_KFA.Text = "Всего поставок";
             buttonSearchTotalPrice_KFA.UseVisualStyleBackColor = true;
             buttonSearchTotalPrice_KFA.Click += buttonSearchTotalPrice_KFA_Click;
             // 
@@ -169,15 +170,26 @@
             buttonSearchMiddlePrice_KFA.Name = "buttonSearchMiddlePrice_KFA";
             buttonSearchMiddlePrice_KFA.Size = new Size(126, 37);
             buttonSearchMiddlePrice_KFA.TabIndex = 7;
-            buttonSearchMiddlePrice_KFA.Text = "Средняя цена";
+            buttonSearchMiddlePrice_KFA.Text = "Поставок в среднем";
             buttonSearchMiddlePrice_KFA.UseVisualStyleBackColor = true;
             buttonSearchMiddlePrice_KFA.Click += buttonSearchMiddlePrice_KFA_Click;
+            // 
+            // buttonAddSupplier_KFA
+            // 
+            buttonAddSupplier_KFA.Location = new Point(117, 250);
+            buttonAddSupplier_KFA.Name = "buttonAddSupplier_KFA";
+            buttonAddSupplier_KFA.Size = new Size(99, 30);
+            buttonAddSupplier_KFA.TabIndex = 10;
+            buttonAddSupplier_KFA.Text = "Add";
+            buttonAddSupplier_KFA.UseVisualStyleBackColor = true;
+            buttonAddSupplier_KFA.Click += buttonAddSupplier_KFA_Click;
             // 
             // FormSuppliers
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(buttonAddSupplier_KFA);
             Controls.Add(groupBoxCalculation_KFA);
             Controls.Add(textBoxFindValue_KFA);
             Controls.Add(buttonFindValue_KFA);
@@ -211,5 +223,6 @@
         private Button buttonSearchTotalPrice_KFA;
         private TextBox textBoxResultCalculation_KFA;
         private Button buttonSearchMiddlePrice_KFA;
+        private Button buttonAddSupplier_KFA;
     }
 }

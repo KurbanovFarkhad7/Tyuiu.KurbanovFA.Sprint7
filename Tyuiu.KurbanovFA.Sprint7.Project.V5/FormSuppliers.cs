@@ -148,19 +148,19 @@ namespace Tyuiu.KurbanovFA.Sprint7.Project.V5
 
         private void buttonSearchMiddlePrice_KFA_Click(object sender, EventArgs e)
         {
-            double[] array = GetArrayRow(1);
+            double[] array = GetArrayRow(3);
             textBoxResultCalculation_KFA.Text = ds.FindMiddleValue(array).ToString();
         }
 
         private void buttonSearchTotalPrice_KFA_Click(object sender, EventArgs e)
         {
-            double[] array = GetArrayRow(1);
+            double[] array = GetArrayRow(3);
             textBoxResultCalculation_KFA.Text = ds.FindTotalValue(array).ToString();
         }
 
         private void buttonSearchMinPrice_KFA_Click(object sender, EventArgs e)
         {
-            double[] array = GetArrayRow(1);
+            double[] array = GetArrayRow(3);
             textBoxResultCalculation_KFA.Text = ds.FindMinValue(array).ToString();
         }
 
@@ -168,6 +168,19 @@ namespace Tyuiu.KurbanovFA.Sprint7.Project.V5
         {
             double[] array = GetArrayRow(3);
             textBoxResultCalculation_KFA.Text = ds.FindMaxValue(array).ToString();
+        }
+
+        private void buttonAddSupplier_KFA_Click(object sender, EventArgs e)
+        {
+            double[] array = { };
+            if (array != null)
+            {
+                array = GetArrayRow(0);
+                /*(dataGridViewGoods_KFA.DataSource as DataTable).Rows.Add();*/
+                dataGridViewSuppliers_KFA.CurrentCell = dataGridViewSuppliers_KFA[0, dataGridViewSuppliers_KFA.Rows.Count - 1];
+                dataGridViewSuppliers_KFA.CurrentCell.Value = array.Length;
+                dataGridViewSuppliers_KFA.CurrentCell = dataGridViewSuppliers_KFA[1, dataGridViewSuppliers_KFA.Rows.Count - 1];
+            }
         }
     }
 }

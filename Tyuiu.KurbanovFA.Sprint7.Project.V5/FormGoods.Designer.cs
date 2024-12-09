@@ -34,7 +34,8 @@
             textBoxFilePath_KFA = new TextBox();
             buttonSaveGood_KFA = new Button();
             buttonImportCSV_KFA = new Button();
-            saveFileDialogMatrix = new SaveFileDialog();
+            saveFileDialogMatrix_KFA = new SaveFileDialog();
+            openFileDialogMatrix_KFA = new OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)dataGridViewGoods_KFA).BeginInit();
             SuspendLayout();
             // 
@@ -94,6 +95,10 @@
             buttonImportCSV_KFA.UseVisualStyleBackColor = true;
             buttonImportCSV_KFA.Click += buttonImportCSV_KFA_Click;
             // 
+            // openFileDialogMatrix_KFA
+            // 
+            openFileDialogMatrix_KFA.FileName = "openFileDialog1";
+            // 
             // FormGoods
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -121,6 +126,7 @@
         private TextBox textBoxFilePath_KFA;
         private Button buttonSaveGood_KFA;
         private Button buttonImportCSV_KFA;
-        private SaveFileDialog saveFileDialogMatrix;
+        private SaveFileDialog saveFileDialogMatrix_KFA;
+        private OpenFileDialog openFileDialogMatrix_KFA;
     }
 }

@@ -39,5 +39,10 @@
         {
             return array.Min();
         }
+
+        public double FindMaxValue(double[] array) 
+        {
+            return array.Max();
+        }
     }
 }

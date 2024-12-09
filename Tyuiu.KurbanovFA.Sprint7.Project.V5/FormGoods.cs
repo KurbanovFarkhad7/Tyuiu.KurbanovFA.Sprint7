@@ -148,12 +148,12 @@ namespace Tyuiu.KurbanovFA.Sprint7.Project.V5
             }
         }
 
-        public double[] GetArrayPrice() //Универсальный метод получения столбца массива
+        public double[] GetArrayRow(int row) //Универсальный метод получения столбца массива
         {
             double[] array = new double[dataGridViewGoods_KFA.Rows.Count];
             for (int i = 0; i < dataGridViewGoods_KFA.Rows.Count; i++)
             {
-                array[i] = dataGridViewGoods_KFA.Rows[i].Cells[0].Value == null ? array[i - 1] : Convert.ToInt32(dataGridViewGoods_KFA.Rows[i].Cells[1].Value);
+                array[i] = dataGridViewGoods_KFA.Rows[i].Cells[0].Value == null ? array[i - 1] : Convert.ToInt32(dataGridViewGoods_KFA.Rows[i].Cells[row].Value);
                 //второй, в конце Cells[1] - номер столбца
             }
             return array;
@@ -161,7 +161,7 @@ namespace Tyuiu.KurbanovFA.Sprint7.Project.V5
 
         private void buttonSearchMiddlePrice_KFA_Click(object sender, EventArgs e)
         {
-            double[] array = GetArrayPrice();
+            double[] array = GetArrayRow(1);
             textBoxResultCalculation_KFA.Text = ds.FindMiddleValue(array).ToString();
 
             //без либы
@@ -178,7 +178,7 @@ namespace Tyuiu.KurbanovFA.Sprint7.Project.V5
 
         private void buttonSearchTotalPrice_KFA_Click(object sender, EventArgs e)
         {
-            double[] array = GetArrayPrice();
+            double[] array = GetArrayRow(1);
             textBoxResultCalculation_KFA.Text = ds.FindTotalValue(array).ToString();
 
             /*int[] array = new int[dataGridViewGoods_KFA.Rows.Count];
@@ -192,8 +192,14 @@ namespace Tyuiu.KurbanovFA.Sprint7.Project.V5
 
         private void buttonSearchMinPrice_KFA_Click(object sender, EventArgs e)
         {
-            double[] array = GetArrayPrice();
+            double[] array = GetArrayRow(1);
             textBoxResultCalculation_KFA.Text = ds.FindMinValue(array).ToString();
+        }
+
+        private void buttonSearchMaxNumber_KFA_Click(object sender, EventArgs e)
+        {
+            double[] array = GetArrayRow(3);
+            textBoxResultCalculation_KFA.Text = ds.FindMaxValue(array).ToString();
         }
     }
 }

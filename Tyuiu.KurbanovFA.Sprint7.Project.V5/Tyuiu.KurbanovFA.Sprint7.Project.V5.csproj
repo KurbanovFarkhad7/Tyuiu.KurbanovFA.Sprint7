@@ -24,4 +24,8 @@
     <PackageReference Include="System.Data.OleDb" Version="8.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Tyuiu.KurbanovFA.Sprint7.Project.V5.Lib\Tyuiu.KurbanovFA.Sprint7.Project.V5.Lib.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -19,28 +19,21 @@ namespace Tyuiu.KurbanovFA.Sprint7.Project.V5
         public FormGoods()
         {
             InitializeComponent();
-            openFileDialogMatrix_KFA.Filter = "Значения, разделенные запятыми(*.csv) | *.csv| Все файлы(*.*) | *.*"; //говорим, какие файлы будут отображаться
-            saveFileDialogMatrix_KFA.Filter = "Значения, разделенные запятыми(*.csv) | *.csv| Все файлы(*.*) | *.*"; //говорим, какие файлы будут сохранят
         }
+        string filePath = @"C:\Users\Cruise\source\repos\Tyuiu.KurbanovFA.Sprint7\objects\SavedGoods.csv"; //путь для импорта/экспорта
 
 
         public void FormGoods_Load(object sender, EventArgs e)
         {
-
+            buttonImportCSV_KFA_Click(sender, e); //чтоб файл загружался сразу
         }
 
         private void buttonGoMain_KFA_Click(object sender, EventArgs e)
         {
+            buttonExportCVS_KFA_Click(sender, e);
             this.Hide();
             FormMain fmain = new FormMain();
             fmain.ShowDialog();
-        }
-
-
-
-        public void LoadDataFromExceltoDataGridView(string fpath, string ext, string hdr)
-        {
-
         }
 
         public void buttonSaveGood_KFA_Click(object sender, EventArgs e)
@@ -68,36 +61,31 @@ namespace Tyuiu.KurbanovFA.Sprint7.Project.V5
                     dataTable.Rows.Add(values);
                 }
             }
-
             // Bind the DataTable to the DataGridView
             dataGridViewGoods_KFA.DataSource = dataTable;
         }
 
         private void buttonImportCSV_KFA_Click(object sender, EventArgs e)
         {
+            // Open a file dialog to select the CSV file
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "CSV files (*.csv)|*.csv|All files (*.*)|*.*";
+            ImportCsvToDataGridView(filePath);
             for (int i = 0; i < dataGridViewGoods_KFA.RowCount - 1; i++)
             {
 
-                if (dataGridViewGoods_KFA.Rows[i].Cells[3].Value.ToString() == " ")
+                if (dataGridViewGoods_KFA.Rows[i].Cells[3].Value.ToString() == "") //удаление пустых строк
                 {
                     dataGridViewGoods_KFA.Rows.RemoveAt(i);
                     i--;
                 }
-            }
-            // Open a file dialog to select the CSV file
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "CSV files (*.csv)|*.csv|All files (*.*)|*.*";
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                // Import the CSV file
-                ImportCsvToDataGridView(openFileDialog.FileName);
             }
         }
 
 
         public void buttonExportCVS_KFA_Click(object sender, EventArgs e)
         {
-            string filePath = @"C:\Users\Cruise\source\repos\Tyuiu.KurbanovFA.Sprint7\objects\SavedGoods.csv";
+            
             // Create the CSV file
             using (StreamWriter sw = new StreamWriter(filePath, false, Encoding.UTF8))
             {
@@ -128,6 +116,7 @@ namespace Tyuiu.KurbanovFA.Sprint7.Project.V5
                     }
                     sw.WriteLine();
                 }
+                
             }
         }
     }

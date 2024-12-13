@@ -207,7 +207,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.backgroud_Image;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 461);
             Controls.Add(buttonAddSupplier_KFA);
             Controls.Add(groupBoxCalculation_KFA);
             Controls.Add(textBoxFindValue_KFA);

@@ -20,9 +20,26 @@ namespace Tyuiu.KurbanovFA.Sprint7.Project.V5
         DataService ds = new DataService();
         string filePath = @"C:\Users\Cruise\source\repos\Tyuiu.KurbanovFA.Sprint7\objects\SavedSuppliers.csv"; //путь для импорта/экспорта
 
+
+        public void GetChangesButtons(System.Windows.Forms.Button buttonName)
+        {
+
+            buttonName.FlatStyle = FlatStyle.Flat;
+            buttonName.BackColor = Color.Transparent;
+            buttonName.FlatAppearance.BorderSize = 0;
+            buttonName.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            buttonName.FlatAppearance.MouseOverBackColor = Color.Transparent;
+        }
+
         private void FormSuppliers_Load(object sender, EventArgs e)
         {
             buttonImportCSV_KFA_Click(sender, e); //чтоб файл загружался сразу
+
+            GetChangesButtons(buttonAddSupplier_KFA);
+            GetChangesButtons(buttonDeleteSupplier_KFA);
+            GetChangesButtons(buttonExportCVS_KFA);
+            GetChangesButtons(buttonFindValue_KFA);
+            GetChangesButtons(buttonGoMain);
         }
 
         private void buttonGoMain_Click(object sender, EventArgs e)

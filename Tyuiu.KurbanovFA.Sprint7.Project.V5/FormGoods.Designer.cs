@@ -50,16 +50,18 @@
             // 
             // buttonGoMain_KFA
             // 
+            buttonGoMain_KFA.BackgroundImage = Properties.Resources.button_menu;
+            buttonGoMain_KFA.BackgroundImageLayout = ImageLayout.Stretch;
             buttonGoMain_KFA.Location = new Point(12, 384);
             buttonGoMain_KFA.Name = "buttonGoMain_KFA";
-            buttonGoMain_KFA.Size = new Size(179, 54);
+            buttonGoMain_KFA.Size = new Size(58, 54);
             buttonGoMain_KFA.TabIndex = 0;
-            buttonGoMain_KFA.Text = "Меню";
             buttonGoMain_KFA.UseVisualStyleBackColor = true;
             buttonGoMain_KFA.Click += buttonGoMain_KFA_Click;
             // 
             // dataGridViewGoods_KFA
             // 
+            dataGridViewGoods_KFA.BackgroundColor = SystemColors.ActiveCaption;
             dataGridViewGoods_KFA.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewGoods_KFA.Location = new Point(12, 10);
             dataGridViewGoods_KFA.Name = "dataGridViewGoods_KFA";
@@ -69,34 +71,38 @@
             // 
             // buttonExportCVS_KFA
             // 
-            buttonExportCVS_KFA.Location = new Point(123, 239);
+            buttonExportCVS_KFA.BackgroundImage = Properties.Resources.button_save;
+            buttonExportCVS_KFA.BackgroundImageLayout = ImageLayout.Stretch;
+            buttonExportCVS_KFA.Location = new Point(170, 239);
             buttonExportCVS_KFA.Name = "buttonExportCVS_KFA";
-            buttonExportCVS_KFA.Size = new Size(105, 30);
+            buttonExportCVS_KFA.Size = new Size(73, 67);
             buttonExportCVS_KFA.TabIndex = 2;
-            buttonExportCVS_KFA.Text = "Save";
             buttonExportCVS_KFA.UseVisualStyleBackColor = true;
             buttonExportCVS_KFA.Click += buttonExportCVS_KFA_Click;
             // 
             // textBoxFindValue_KFA
             // 
-            textBoxFindValue_KFA.Location = new Point(12, 314);
+            textBoxFindValue_KFA.Location = new Point(12, 332);
             textBoxFindValue_KFA.Name = "textBoxFindValue_KFA";
             textBoxFindValue_KFA.Size = new Size(216, 23);
             textBoxFindValue_KFA.TabIndex = 3;
             // 
             // buttonDeleteGood_KFA
             // 
-            buttonDeleteGood_KFA.Location = new Point(13, 343);
+            buttonDeleteGood_KFA.BackgroundImage = Properties.Resources.button_delete;
+            buttonDeleteGood_KFA.BackgroundImageLayout = ImageLayout.Zoom;
+            buttonDeleteGood_KFA.Location = new Point(91, 239);
             buttonDeleteGood_KFA.Name = "buttonDeleteGood_KFA";
-            buttonDeleteGood_KFA.Size = new Size(105, 30);
+            buttonDeleteGood_KFA.Size = new Size(73, 67);
             buttonDeleteGood_KFA.TabIndex = 4;
-            buttonDeleteGood_KFA.Text = "Delete";
             buttonDeleteGood_KFA.UseVisualStyleBackColor = true;
             buttonDeleteGood_KFA.Click += buttonDeleteGood_KFA_Click;
             // 
             // buttonImportCSV_KFA
             // 
-            buttonImportCSV_KFA.Location = new Point(248, 417);
+            buttonImportCSV_KFA.Font = new Font("Segoe Print", 9.75F);
+            buttonImportCSV_KFA.ForeColor = SystemColors.WindowText;
+            buttonImportCSV_KFA.Location = new Point(487, 414);
             buttonImportCSV_KFA.Name = "buttonImportCSV_KFA";
             buttonImportCSV_KFA.Size = new Size(18, 21);
             buttonImportCSV_KFA.TabIndex = 5;
@@ -111,31 +117,38 @@
             // 
             // buttonFindValue_KFA
             // 
-            buttonFindValue_KFA.Location = new Point(12, 275);
+            buttonFindValue_KFA.BackgroundImage = Properties.Resources.button_search;
+            buttonFindValue_KFA.BackgroundImageLayout = ImageLayout.Stretch;
+            buttonFindValue_KFA.Location = new Point(234, 315);
             buttonFindValue_KFA.Name = "buttonFindValue_KFA";
-            buttonFindValue_KFA.Size = new Size(216, 34);
+            buttonFindValue_KFA.Size = new Size(57, 55);
             buttonFindValue_KFA.TabIndex = 6;
-            buttonFindValue_KFA.Text = "Найти";
             buttonFindValue_KFA.UseVisualStyleBackColor = true;
             buttonFindValue_KFA.Click += buttonFindValue_KFA_Click;
             // 
             // buttonSearchMiddlePrice_KFA
             // 
-            buttonSearchMiddlePrice_KFA.Location = new Point(6, 22);
+            buttonSearchMiddlePrice_KFA.BackColor = SystemColors.GradientActiveCaption;
+            buttonSearchMiddlePrice_KFA.BackgroundImageLayout = ImageLayout.None;
+            buttonSearchMiddlePrice_KFA.FlatStyle = FlatStyle.Flat;
+            buttonSearchMiddlePrice_KFA.Location = new Point(10, 23);
             buttonSearchMiddlePrice_KFA.Name = "buttonSearchMiddlePrice_KFA";
-            buttonSearchMiddlePrice_KFA.Size = new Size(126, 37);
+            buttonSearchMiddlePrice_KFA.Size = new Size(126, 62);
             buttonSearchMiddlePrice_KFA.TabIndex = 7;
             buttonSearchMiddlePrice_KFA.Text = "Средняя цена";
-            buttonSearchMiddlePrice_KFA.UseVisualStyleBackColor = true;
+            buttonSearchMiddlePrice_KFA.UseVisualStyleBackColor = false;
             buttonSearchMiddlePrice_KFA.Click += buttonSearchMiddlePrice_KFA_Click;
             // 
             // groupBoxCalculation_KFA
             // 
+            groupBoxCalculation_KFA.BackColor = SystemColors.ActiveCaption;
             groupBoxCalculation_KFA.Controls.Add(buttonSearchMaxNumber_KFA);
             groupBoxCalculation_KFA.Controls.Add(buttonSearchMinPrice_KFA);
             groupBoxCalculation_KFA.Controls.Add(buttonSearchTotalPrice_KFA);
             groupBoxCalculation_KFA.Controls.Add(textBoxResultCalculation_KFA);
             groupBoxCalculation_KFA.Controls.Add(buttonSearchMiddlePrice_KFA);
+            groupBoxCalculation_KFA.Font = new Font("Segoe Print", 9.75F);
+            groupBoxCalculation_KFA.ForeColor = SystemColors.WindowText;
             groupBoxCalculation_KFA.Location = new Point(473, 250);
             groupBoxCalculation_KFA.Name = "groupBoxCalculation_KFA";
             groupBoxCalculation_KFA.Size = new Size(300, 188);
@@ -145,56 +158,67 @@
             // 
             // buttonSearchMaxNumber_KFA
             // 
-            buttonSearchMaxNumber_KFA.Location = new Point(138, 64);
+            buttonSearchMaxNumber_KFA.BackColor = SystemColors.GradientActiveCaption;
+            buttonSearchMaxNumber_KFA.FlatStyle = FlatStyle.Flat;
+            buttonSearchMaxNumber_KFA.Location = new Point(152, 91);
             buttonSearchMaxNumber_KFA.Name = "buttonSearchMaxNumber_KFA";
-            buttonSearchMaxNumber_KFA.Size = new Size(142, 42);
+            buttonSearchMaxNumber_KFA.Size = new Size(142, 56);
             buttonSearchMaxNumber_KFA.TabIndex = 11;
             buttonSearchMaxNumber_KFA.Text = "Максимальное кол-во";
-            buttonSearchMaxNumber_KFA.UseVisualStyleBackColor = true;
+            buttonSearchMaxNumber_KFA.UseVisualStyleBackColor = false;
             buttonSearchMaxNumber_KFA.Click += buttonSearchMaxNumber_KFA_Click;
             // 
             // buttonSearchMinPrice_KFA
             // 
-            buttonSearchMinPrice_KFA.Location = new Point(6, 65);
+            buttonSearchMinPrice_KFA.BackColor = SystemColors.GradientActiveCaption;
+            buttonSearchMinPrice_KFA.FlatStyle = FlatStyle.Flat;
+            buttonSearchMinPrice_KFA.Location = new Point(10, 91);
             buttonSearchMinPrice_KFA.Name = "buttonSearchMinPrice_KFA";
-            buttonSearchMinPrice_KFA.Size = new Size(126, 41);
+            buttonSearchMinPrice_KFA.Size = new Size(126, 56);
             buttonSearchMinPrice_KFA.TabIndex = 10;
             buttonSearchMinPrice_KFA.Text = "Минимальная цена";
-            buttonSearchMinPrice_KFA.UseVisualStyleBackColor = true;
+            buttonSearchMinPrice_KFA.UseVisualStyleBackColor = false;
             buttonSearchMinPrice_KFA.Click += buttonSearchMinPrice_KFA_Click;
             // 
             // buttonSearchTotalPrice_KFA
             // 
-            buttonSearchTotalPrice_KFA.Location = new Point(138, 22);
+            buttonSearchTotalPrice_KFA.BackColor = SystemColors.GradientActiveCaption;
+            buttonSearchTotalPrice_KFA.BackgroundImageLayout = ImageLayout.None;
+            buttonSearchTotalPrice_KFA.FlatStyle = FlatStyle.Flat;
+            buttonSearchTotalPrice_KFA.Location = new Point(152, 23);
             buttonSearchTotalPrice_KFA.Name = "buttonSearchTotalPrice_KFA";
-            buttonSearchTotalPrice_KFA.Size = new Size(142, 37);
+            buttonSearchTotalPrice_KFA.Size = new Size(142, 62);
             buttonSearchTotalPrice_KFA.TabIndex = 9;
             buttonSearchTotalPrice_KFA.Text = "Общая стоимость";
-            buttonSearchTotalPrice_KFA.UseVisualStyleBackColor = true;
+            buttonSearchTotalPrice_KFA.UseVisualStyleBackColor = false;
             buttonSearchTotalPrice_KFA.Click += buttonSearchTotalPrice_KFA_Click;
             // 
             // textBoxResultCalculation_KFA
             // 
-            textBoxResultCalculation_KFA.Location = new Point(101, 134);
+            textBoxResultCalculation_KFA.Location = new Point(10, 152);
             textBoxResultCalculation_KFA.Name = "textBoxResultCalculation_KFA";
             textBoxResultCalculation_KFA.ReadOnly = true;
-            textBoxResultCalculation_KFA.Size = new Size(100, 23);
+            textBoxResultCalculation_KFA.Size = new Size(100, 30);
             textBoxResultCalculation_KFA.TabIndex = 8;
             // 
             // buttonAddGood_KFA
             // 
-            buttonAddGood_KFA.Location = new Point(13, 239);
+            buttonAddGood_KFA.BackColor = Color.Transparent;
+            buttonAddGood_KFA.BackgroundImage = Properties.Resources.button_add;
+            buttonAddGood_KFA.BackgroundImageLayout = ImageLayout.Zoom;
+            buttonAddGood_KFA.Location = new Point(12, 239);
             buttonAddGood_KFA.Name = "buttonAddGood_KFA";
-            buttonAddGood_KFA.Size = new Size(104, 30);
+            buttonAddGood_KFA.Size = new Size(73, 67);
             buttonAddGood_KFA.TabIndex = 9;
-            buttonAddGood_KFA.Text = "Add";
-            buttonAddGood_KFA.UseVisualStyleBackColor = true;
+            buttonAddGood_KFA.UseVisualStyleBackColor = false;
             buttonAddGood_KFA.Click += buttonAddGood_KFA_Click;
             // 
             // FormGoods
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.backgroud_Image;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
             Controls.Add(buttonAddGood_KFA);
             Controls.Add(groupBoxCalculation_KFA);
@@ -206,7 +230,7 @@
             Controls.Add(dataGridViewGoods_KFA);
             Controls.Add(buttonGoMain_KFA);
             Name = "FormGoods";
-            Text = "Goods";
+            Text = "Товары";
             Load += FormGoods_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewGoods_KFA).EndInit();
             groupBoxCalculation_KFA.ResumeLayout(false);
